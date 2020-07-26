@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    @using (Html.BeginForm("Damage", "Home", FormMethod.Post))
+    {
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>QUEEN</td>
+                <td>DRONE</td>
+                <td>WORKER</td>
+            </tr>
+            <tr>
+                <td><img src="~/images/queen.png" alt="IMAGES" /></td>
+                <td><img src="~/images/drone.png" alt="IMAGES" /></td>
+                <td><img src="~/images/worker.png" alt="IMAGES" /></td>
+            </tr>
+            <tr>
+                <td>@Html.Label("", (string)ViewBag.Queen)</td>
+                <td>@Html.Label("", (string)ViewBag.Drone)</td>
+                <td>@Html.Label("", (string)ViewBag.Worker)</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="submit" name="button" value="Damage" />
+                </td>
+            </tr>
+        </table>
+    }
+</div>
